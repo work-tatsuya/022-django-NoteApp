@@ -7,6 +7,7 @@ Simple Notes API（DRF）
 
 # スキルセット
 - Django基礎（プロジェクト作成、モデル、マイグレーション）
+- コンテナを使った環境構築
 - REST APIの基本（CRUD: Create, Read, Update, Delete）
 - PostmanでのAPIテスト
 - 開発環境はdockerを用いる

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}NoteApp{% endblock %}</title>
+</head>
+
+<body style="background-color: #bcd0eb;">
+
+  {% if user.is_authenticated %}
+  <header>
+    <a href="{% url 'notes:note_list' %}">ノート一覧に戻る</a>
+    <form method="post" action="{% url 'logout' %}">
+      {% csrf_token %}
+      <button type="submit">ログアウト</button>
+    </form>
+    <hr>
+  </header>
+  {% else %}
+  {% endif %}
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+
+</html>

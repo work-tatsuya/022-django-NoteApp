@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>ノートを削除</h2>
+<p>「{{ note.title }}」を本当に削除しますか？</p>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">削除</button>
+  <a href="{% url 'notes:note_list' %}">キャンセル</a>
+</form>
+{% endblock %}
